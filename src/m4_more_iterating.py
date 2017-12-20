@@ -637,7 +637,7 @@ def run_test_sum_first_n():
     print('       actual:  ', actual)
 
     # Test 9:
-    expected = 10
+    expected = 11
     actual = sum_first_n([5,6,4,3], 2)
     print()
     print('Test 9 expected:', expected)
@@ -666,7 +666,7 @@ def sum_first_n(numbers, n):
       :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:
@@ -677,8 +677,9 @@ def sum_first_n(numbers, n):
     # ------------------------------------------------------------------
 
     t = 0
-    for k in range(n):
-        t = t + numbers[k+1]
+    for k in range(n+1):
+        if (k>0):
+            t += numbers[k-1]
     return t
 
 # ----------------------------------------------------------------------
