@@ -626,6 +626,20 @@ def run_test_sum_first_n():
     # TO DO 8 (continued):  Add your 2 ADDITIONAL tests here:
 
 
+    # Test 8:
+    expected = 0
+    actual = sum_first_n([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], 0)
+    print()
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 9:
+    expected = 10
+    actual = sum_first_n([5,6,4,3], 2)
+    print()
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
 def sum_first_n(numbers, n):
     """
     What comes in:
@@ -657,6 +671,15 @@ def sum_first_n(numbers, n):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # ------------------------------------------------------------------
+
+    thesum = 0
+    for k in range(len(numbers)):
+        if (k<n):
+            newnum = numbers[k+1]
+            thesum= thesum+newnum
+    return thesum
+
+#THIS IS HARD I HATE EVERYTHING
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
