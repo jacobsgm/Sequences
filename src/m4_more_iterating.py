@@ -554,13 +554,14 @@ def count_positive_sines(numbers):
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this TEST function.
+    # DONE: 8. Implement this TEST function.
     #   It TESTS the  sum_first_n  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests.
     #
     #   As usual, include both EXPECTED and ACTUAL results in your test
     #   and compute the latter BY HAND (not by running your program).
     # ------------------------------------------------------------------
+
     print()
     print('--------------------------------------------------')
     print('Testing the   sum_first_n   function:')
@@ -603,6 +604,7 @@ def run_test_sum_first_n():
 
     # Test 6:  This test uses a RANDOMLY generated sequence
     #          and an ORACLE to determine the expected (correct) result.
+
     sequence = []
     for _ in range(10000):
         sequence.append(random.randrange(-100, 100))
@@ -614,6 +616,7 @@ def run_test_sum_first_n():
 
     # Test 7:  This test uses a RANDOMLY generated sequence
     #          and an ORACLE to determine the expected (correct) result.
+
     sequence = []
     for _ in range(10000):
         sequence.append(random.randrange(-100, 100))
@@ -630,15 +633,16 @@ def run_test_sum_first_n():
     expected = 0
     actual = sum_first_n([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], 0)
     print()
-    print('Test 1 expected:', expected)
+    print('Test 8 expected:', expected)
     print('       actual:  ', actual)
 
     # Test 9:
     expected = 10
     actual = sum_first_n([5,6,4,3], 2)
     print()
-    print('Test 1 expected:', expected)
+    print('Test 9 expected:', expected)
     print('       actual:  ', actual)
+
 
 def sum_first_n(numbers, n):
     """
@@ -672,14 +676,10 @@ def sum_first_n(numbers, n):
     #         as an ORACLE in TESTING this function, however.
     # ------------------------------------------------------------------
 
-    thesum = 0
-    for k in range(len(numbers)):
-        if (k<n):
-            newnum = numbers[k+1]
-            thesum= thesum+newnum
-    return thesum
-
-#THIS IS HARD I HATE EVERYTHING
+    t = 0
+    for k in range(n):
+        t = t + numbers[k+1]
+    return t
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
